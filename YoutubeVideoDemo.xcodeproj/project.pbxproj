@@ -14,6 +14,9 @@
 		FFAC0C66204D996C003269C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFAC0C64204D996C003269C1 /* LaunchScreen.storyboard */; };
 		FFAC0C71204D996C003269C1 /* YoutubeVideoDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC0C70204D996C003269C1 /* YoutubeVideoDemoTests.swift */; };
 		FFAC0C7C204D996C003269C1 /* YoutubeVideoDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC0C7B204D996C003269C1 /* YoutubeVideoDemoUITests.swift */; };
+		FFAC0C8E204DA463003269C1 /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAC0C8D204DA463003269C1 /* YouTubePlayer.swift */; };
+		FFAC0C90204DA475003269C1 /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = FFAC0C8F204DA475003269C1 /* YTPlayer.html */; };
+		FFAC0C94204DA666003269C1 /* YouTubePlayer.swift in Resources */ = {isa = PBXBuildFile; fileRef = FFAC0C8D204DA463003269C1 /* YouTubePlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,8 @@
 		FFAC0C77204D996C003269C1 /* YoutubeVideoDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeVideoDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAC0C7B204D996C003269C1 /* YoutubeVideoDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoDemoUITests.swift; sourceTree = "<group>"; };
 		FFAC0C7D204D996C003269C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFAC0C8D204DA463003269C1 /* YouTubePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubePlayer.swift; sourceTree = "<group>"; };
+		FFAC0C8F204DA475003269C1 /* YTPlayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = YTPlayer.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +102,7 @@
 		FFAC0C5A204D996B003269C1 /* YoutubeVideoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FFAC0C8C204DA45B003269C1 /* New Group */,
 				FFAC0C5B204D996B003269C1 /* AppDelegate.swift */,
 				FFAC0C5D204D996B003269C1 /* ViewController.swift */,
 				FFAC0C5F204D996B003269C1 /* Main.storyboard */,
@@ -123,6 +129,15 @@
 				FFAC0C7D204D996C003269C1 /* Info.plist */,
 			);
 			path = YoutubeVideoDemoUITests;
+			sourceTree = "<group>";
+		};
+		FFAC0C8C204DA45B003269C1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC0C8D204DA463003269C1 /* YouTubePlayer.swift */,
+				FFAC0C8F204DA475003269C1 /* YTPlayer.html */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAC0C94204DA666003269C1 /* YouTubePlayer.swift in Resources */,
 				FFAC0C66204D996C003269C1 /* LaunchScreen.storyboard in Resources */,
 				FFAC0C63204D996C003269C1 /* Assets.xcassets in Resources */,
+				FFAC0C90204DA475003269C1 /* YTPlayer.html in Resources */,
 				FFAC0C61204D996B003269C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAC0C8E204DA463003269C1 /* YouTubePlayer.swift in Sources */,
 				FFAC0C5E204D996B003269C1 /* ViewController.swift in Sources */,
 				FFAC0C5C204D996B003269C1 /* AppDelegate.swift in Sources */,
 			);
@@ -430,6 +448,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YoutubeVideoDemo",
+					"$(PROJECT_DIR)/YoutubeVideoDemo/New\\ Group",
 				);
 				INFOPLIST_FILE = YoutubeVideoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -448,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YoutubeVideoDemo",
+					"$(PROJECT_DIR)/YoutubeVideoDemo/New\\ Group",
 				);
 				INFOPLIST_FILE = YoutubeVideoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

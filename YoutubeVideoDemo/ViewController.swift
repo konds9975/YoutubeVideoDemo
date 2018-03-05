@@ -12,9 +12,41 @@ class ViewController: UIViewController {
 
 
 
+    @IBOutlet weak var ytview: YouTubePlayerView!
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        loadViewYT()
+        loadVideoWebView()
+       
+    }
+    func loadViewYT()  {
+        
+        ytview.playerVars = [
+            "playsinline": "1" as AnyObject,
+            "controls": "1" as AnyObject,
+            "showinfo": "0" as AnyObject
+        ]
+        ytview.loadVideoID("SfcpAV-8qtU")
+        
+    }
+    
+    @IBAction func playBtn(_ sender: Any) {
+        
+        if ytview.ready {
+            if ytview.playerState != YouTubePlayerState.Playing {
+                ytview.play()
+                // playButton.setTitle("Pause", forState: .Normal)
+            } else {
+                ytview.pause()
+                // playButton.setTitle("Play", forState: .Normal)
+            }
+        }
+        
+    }
+    func loadVideoWebView()  {
+        
         webView.allowsInlineMediaPlayback = true
         webView.mediaPlaybackRequiresUserAction = false
         let videoID = "SfcpAV-8qtU"
@@ -26,14 +58,11 @@ class ViewController: UIViewController {
         
         let embededHTML = "<html><body style='margin:0px;padding:0px;'><script type='text/javascript' src='http://www.youtube.com/iframe_api'></script><script type='text/javascript'>function onYouTubeIframeAPIReady(){ytplayer=new YT.Player('playerId',{events:{onReady:onPlayerReady}})}function onPlayerReady(a){a.target.playVideo();}</script><iframe id='playerId' type='text/html' width='\(self.webView.frame.size.width+50)' height='\(self.webView.frame.size.height)' src='http://www.youtube.com/embed/\(videoID)?enablejsapi=1&rel=0&controls=1&showinfo=0&playsinline=1&autoplay=0' frameborder='0'></body></html>"
         
-       
-        webView.loadHTMLString(embededHTML, baseURL: Bundle.main.bundleURL)
         
-       
+        webView.loadHTMLString(embededHTML, baseURL: Bundle.main.bundleURL)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    
+    
    
 
 }
