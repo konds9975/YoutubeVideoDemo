@@ -28,7 +28,14 @@ class ViewController: UIViewController {
             "controls": "1" as AnyObject,
             "showinfo": "0" as AnyObject
         ]
-        ytview.loadVideoID("SfcpAV-8qtU")
+        
+        
+        
+        //load Single Video
+        //ytview.loadVideoID("SfcpAV-8qtU")
+        
+        //Load Playlist 
+        ytview.loadPlaylistID("RDMMzZ2i_sb4xOg")
         
     }
     
@@ -37,14 +44,24 @@ class ViewController: UIViewController {
         if ytview.ready {
             if ytview.playerState != YouTubePlayerState.Playing {
                 ytview.play()
-                // playButton.setTitle("Pause", forState: .Normal)
+                (sender as! UIButton).setTitle("Pause", for: .normal)
             } else {
                 ytview.pause()
-                // playButton.setTitle("Play", forState: .Normal)
+                (sender as! UIButton).setTitle("Play", for: .normal)
             }
         }
         
     }
+    
+    @IBAction func prev(sender: UIButton) {
+        ytview.previousVideo()
+    }
+    
+    @IBAction func next(sender: UIButton) {
+        ytview.nextVideo()
+    }
+
+    
     func loadVideoWebView()  {
         
         webView.allowsInlineMediaPlayback = true

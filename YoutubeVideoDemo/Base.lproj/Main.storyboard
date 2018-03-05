@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWi-P1-cqb" customClass="YouTubePlayerView" customModule="YoutubeVideoDemo" customModuleProvider="target">
-                                <rect key="frame" x="10" y="258.5" width="355" height="150"/>
+                                <rect key="frame" x="10" y="208.5" width="355" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="oBp-ig-Z4f"/>
+                                    <constraint firstAttribute="height" constant="250" id="oBp-ig-Z4f"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGn-bl-U21">
@@ -43,7 +43,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9X-Lq-g5S">
-                                <rect key="frame" x="164.5" y="514" width="46" height="30"/>
+                                <rect key="frame" x="164.5" y="564" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gbU-rY-kT5"/>
                                     <constraint firstAttribute="width" constant="46" id="mis-dW-hhn"/>
@@ -53,6 +53,28 @@
                                     <action selector="playBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcy-vx-OAC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dt-zy-ndO">
+                                <rect key="frame" x="64.5" y="564" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mon-B2-7hB"/>
+                                    <constraint firstAttribute="width" constant="70" id="ruf-yy-wyd"/>
+                                </constraints>
+                                <state key="normal" title="privious"/>
+                                <connections>
+                                    <action selector="prevWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ns7-tV-Rha"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfa-U4-0sD">
+                                <rect key="frame" x="240.5" y="564" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R8h-eb-8yU"/>
+                                    <constraint firstAttribute="width" constant="46" id="Vbp-Tw-nDD"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nfn-TF-bSU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,8 +82,12 @@
                             <constraint firstItem="K9X-Lq-g5S" firstAttribute="top" secondItem="xWi-P1-cqb" secondAttribute="bottom" constant="105.5" id="AhT-EO-ApJ"/>
                             <constraint firstItem="xWi-P1-cqb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DSw-4w-M8A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IGn-bl-U21" secondAttribute="trailing" constant="10" id="ESK-8D-nyL"/>
+                            <constraint firstItem="jfa-U4-0sD" firstAttribute="leading" secondItem="K9X-Lq-g5S" secondAttribute="trailing" constant="30" id="HI5-wa-eYU"/>
                             <constraint firstItem="IGn-bl-U21" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NMW-Oh-xSf"/>
+                            <constraint firstItem="jfa-U4-0sD" firstAttribute="centerY" secondItem="K9X-Lq-g5S" secondAttribute="centerY" id="Nci-Wo-GGt"/>
+                            <constraint firstItem="K9X-Lq-g5S" firstAttribute="leading" secondItem="3Dt-zy-ndO" secondAttribute="trailing" constant="30" id="Sw4-h6-QSz"/>
                             <constraint firstItem="K9X-Lq-g5S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VGi-m6-buR"/>
+                            <constraint firstItem="3Dt-zy-ndO" firstAttribute="centerY" secondItem="K9X-Lq-g5S" secondAttribute="centerY" id="ZW0-Tt-enN"/>
                             <constraint firstItem="IGn-bl-U21" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="iik-dV-ZFA"/>
                             <constraint firstItem="xWi-P1-cqb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kwH-M4-BUq"/>
                         </constraints>
